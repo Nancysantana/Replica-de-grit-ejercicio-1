@@ -1,0 +1,78 @@
+/*
+12 columnas = 100%
+11 columnas = 91.66666666666666%
+10 columnas = 83.33333333333334%
+9 columnas  = 75%
+8 columnas  = 66.66666666666666%
+7 columnas  = 58.333333333333336%
+6 columnas  = 50%
+5 columnas  = 41.66666666666667%
+4 columnas  = 33.33333333333333%
+3 columnas  = 25%
+2 columnas  = 16.666666666666664%
+1 columna   = 8.333333333333332%
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  max-width: 1200px;
+  width: 100%;
+  /* para centrar el contenedor */
+  margin: auto;
+  background-color:blue;
+}
+
+.row::before {
+  content: ' ';
+  display: table;/*es como display: block */
+}
+.row:after {
+ clear: both;/*se utiliza para limpiarlimpiar */
+}
+
+[class*='col-']{
+  min-height: 7px;
+  float: left;
+  padding: 12px;
+  /* margin: 12px; se tendria que calcular el px  */
+  background-color: red;
+  border: 10px solid white;
+}
+
+.col-1 {
+  background:#ffff00;
+  width:8.33%;
+}
+
+.col-2 {
+  background: #afff00;
+  width: 16.66%;
+}
+
+.col-3 {
+  background:#1ee2a6;
+  width: 25%;
+}
+
+.col-4 {
+  background:  #01b6ad;
+  width:33.3%;
+}
+
+.col-6 {
+  background: #9c42d1;
+  width: 50%;
+}
+
+.col-12 {
+  background: #d126a9;
+  width: 100%;
+}
